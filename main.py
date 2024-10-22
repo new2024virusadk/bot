@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import schedule
 from telegram import send_telegram
 from telegramchannel import send_channel
-from expressvpn import connect
+# from expressvpn import connect
 import telebot
 
 # import schedule
@@ -19,7 +19,7 @@ import telebot
 def main():
     # message1 = result()
     
-    connect ()
+    # connect ()
     cookies = {
         'cud': 'rBMAD2YCXpW9EQt3B/I3Ag==',
         '_ga': 'GA1.2.698336348.1711431335',
@@ -187,7 +187,7 @@ def main():
                 lp1,lp2 = get_kol_pob_igr_last_vstrechi(soup)
                 # print('Личные встречи:',lp1,lp2)
                 if (kol_lv == 10) and (kol_ov == 10):
-                    if (abs(lp1 - lp2) >= 2) and (abs(p1-p2) >= 3):
+                    if ((abs(lp1 - lp2) >= 2) and (abs(p1-p2) >= 3)) or ((lp1 == lp2) and (p1 ==p2)):
                         print(date_ev_str)
                         print(liga)
                         print(name_ht,' - ',name_at)
