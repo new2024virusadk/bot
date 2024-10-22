@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import schedule
 from telegram import send_telegram
 from telegramchannel import send_channel
-# from expressvpn import connect
+from expressvpn import connect
 import telebot
 
 # import schedule
@@ -19,7 +19,7 @@ import telebot
 def main():
     # message1 = result()
     
-    # connect ()
+    connect ()
     cookies = {
         'cud': 'rBMAD2YCXpW9EQt3B/I3Ag==',
         '_ga': 'GA1.2.698336348.1711431335',
